@@ -11,10 +11,10 @@
 #'@param sound character string or number specifying what sound to be played by 
 #'  either specifying one of the built in sounds, specifying the path to a wav 
 #'  file or specifying an url. The default is 1. Possible sounds are:
-#'  \enumerate{ \item \code{"ping"} \item \code{"coin"} \item \code{"fanfare"}
-#'  \item \code{"complete"} \item \code{"treasure"} \item \code{"ready"} \item
-#'  \code{"shotgun"} \item \code{"mario"} \item \code{"wilhelm"} \item
-#'  \code{"facebook"} \item \code{"sword"} } If \code{sound} does not match any
+#'  \enumerate{ \item \code{"one"} \item \code{"two"} \item \code{"three"}
+#'  \item \code{"four"} \item \code{"five"} \item \code{"six"} \item
+#'  \code{"seven"} \item \code{"eight"} \item \code{"nine"} \item
+#'  \code{"ten"} \item \code{"injection"} } If \code{sound} does not match any
 #'  of the sounds above, or is a valid path or url, a random sound will be
 #'  played. Currently \code{beep} can only handle http urls, https is not
 #'  supported.
@@ -42,17 +42,17 @@
 #'@export
 beep <- function(sound=1, expr=NULL) {
   expr
-  sounds <- c(ping = "microwave_ping_mono.wav",
-              coin = "smb_coin.wav",
-              fanfare = "victory_fanfare_mono.wav",
-              complete = "work_complete.wav",
-              treasure = "new_item.wav",
-              ready = "ready_master.wav",
-              shotgun = "shotgun.wav",
-              mario = "smb_stage_clear.wav",
-              wilhelm = "wilhelm.wav",
-              facebook = "facebook.wav",
-              sword = "sword.wav")
+  sounds <- c(ten = "ten.wav",
+              nine = "nine.wav",
+              eight = "eight.wav",
+              seven = "seven.wav",
+              six = "six.wav",
+              five = "five.wav",
+              four = "four.wav",
+              three = "three.wav",
+              two = "two.wav",
+              one = "one",
+              injection = "injection.wav")
   sound_path <- NULL
   if(is.na(sounds[sound]) || length(sounds[sound]) != 1) {
     if(is.character(sound)) {
